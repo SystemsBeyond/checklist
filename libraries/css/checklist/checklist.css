@@ -121,3 +121,8 @@ body
     margin-right: 0;
   }
 }
+
+button.close {
+    padding: 15px;
+    color: #ffffff;
+}
