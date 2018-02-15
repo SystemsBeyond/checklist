@@ -19,7 +19,7 @@
                 <li class="sidebar-brand">
                     <div class="row">
                         <div class="col-lg-8">
-                    <a href="#">Start Bootstrap</a>
+                    <a href="#">Check-List</a>
                 </div><div class="col-lg-2">
                     <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
                     <a href="#" class="fecha">
@@ -52,14 +52,25 @@
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+            <a class="navbar-brand" href="#">Navbar</a>
+        </nav>
 
+        <div class="row btn-secondary" >
+            <div class="col-lg-10">
+                teste
+            </div>
+        </div>
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <h1>Simple Sidebar</h1>
                 <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                 <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>
+                <!--<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>-->
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -71,14 +82,28 @@
 
     <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    $(".fecha").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
+        $(document).ready(function() {
+            $('#menu-toggle').hide();
+            $('.navbar-toggler-icon').hide();
+        });
+        /*$("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $('#menu-toggle').hide();
+            $('.navbar-toggler-icon').hide();
+        });*/
+        $(".fecha").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $('#menu-toggle').show();
+            $('.navbar-toggler-icon').show();
+        });
+        $(".navbar-toggler-icon").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $('#menu-toggle').hide();
+            $('.navbar-toggler-icon').hide();
+        });
     </script>
 </body>
 </html>
