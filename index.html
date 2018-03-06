@@ -28,36 +28,66 @@
                         </div>
                     </div>
                 </li>
-                <li>
-                    <a href="#">Dashboard</a>
+                <li class="gui-folder">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Dashboard</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#">Shortcuts</a>
+                <li class="gui-folder">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Shortcuts</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#">Overview</a>
+                <li class="gui-folder">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Overview</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#">Events</a>
+                <li class="gui-folder">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Events</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#">About</a>
+                <li class="gui-folder">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">About</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#">Services</a>
+                <li class="gui-folder">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Services</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
+                <li class="gui-folder">
+                    <a href="#">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Contact</span>
+                    </a>
                 </li>
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
-        <!--<div class="nav-top">
-            teste
-        </div>
-        <div class="nav-info">
-            teste
-        </div>-->
+
+        <!-- /#navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light nav-top">
             <a class="navbar-brand" href="#"><span class="navbar-toggler-icon"></span></a>
 
@@ -75,28 +105,6 @@
             </form>
 
         </nav>
-        <!--<nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <span class="navbar-toggler-icon"></span>
-                <form class="form-inline">
-                    <span class="navbar-toggler-icon"></span>
-                    <button class="btn btn-sm btn-outline-success" type="button">Dashboard</button>
-                    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-                </form>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-
-                        <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-
-            </div>
-            <form class="form-inline">
-                <button class="btn btn-outline-success" type="button">Main button</button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-            </form>
-        </nav> -->
-        <!--<nav class="navbar navbar-light bg-light nav-top">
-            teste
-        </nav> -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -120,18 +128,14 @@
             $('#menu-toggle').hide();
             $('.navbar-toggler-icon').hide();
         });
-        /*$("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-            $('#menu-toggle').hide();
-            $('.navbar-toggler-icon').hide();
-        });*/
+
         $(".fecha").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
             $('#menu-toggle').show();
             $('.navbar-toggler-icon').show();
         });
+
         $(".navbar-toggler-icon").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
