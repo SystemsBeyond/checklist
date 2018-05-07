@@ -29,66 +29,50 @@
                     </div>
                 </li>
                 <li class="gui-folder">
-                    <a href="#">
+                    <a href="#" class="menu">
                         <div class="gui-icon">
                             <img src="libraries/svg/x_with_16.svg">
                         </div>
-                        <span class="title">Dashboard</span>
+                        <span class="title">Cadastro</span>
                     </a>
-                    <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
+                    <ul class="child-menu">
+                      <li><a href="index.html">Empresa</a></li>
+                      <li><a href="index2.html">Filiais</a></li>
+                      <li><a href="index2.html">Auditor</a></li>
+                      <li><a href="index3.html">Check-list</a></li>
+                      <li><a href="index3.html">Perguntas</a></li>
+                      <li><a href="index2.html">Check-list Filiais</a></li>
+                      <li><a href="index2.html">Check-list Auditor</a></li>
                     </ul>
                 </li>
                 <li class="gui-folder">
-                    <a href="#">
+                    <a href="#" class="menu">
                         <div class="gui-icon">
                             <img src="libraries/svg/x_with_16.svg">
                         </div>
-                        <span class="title">Shortcuts</span>
+                        <span class="title">Check-List</span>
                     </a>
+                    <ul class="child-menu">
+                      <li><a href="index.html">Aplicar</a></li>
+                      <li><a href="index2.html">Ações</a></li>
+                      <li><a href="index2.html">Auditar</a></li>
+                    </ul>
                 </li>
                 <li class="gui-folder">
-                    <a href="#">
+                    <a href="#" class="menu">
                         <div class="gui-icon">
                             <img src="libraries/svg/x_with_16.svg">
                         </div>
-                        <span class="title">Overview</span>
+                        <span class="title">Relatórios</span>
                     </a>
+                    <ul class="child-menu">
+                      <li><a href="index.html">Diário</a></li>
+                      <li><a href="index2.html">Ações</a></li>
+                      <li><a href="index2.html">Intervalos</a></li>
+                      <li><a href="index2.html">Estatísticas</a></li>
+                    </ul>
                 </li>
-                <li class="gui-folder">
-                    <a href="#">
-                        <div class="gui-icon">
-                            <img src="libraries/svg/x_with_16.svg">
-                        </div>
-                        <span class="title">Events</span>
-                    </a>
-                </li>
-                <li class="gui-folder">
-                    <a href="#">
-                        <div class="gui-icon">
-                            <img src="libraries/svg/x_with_16.svg">
-                        </div>
-                        <span class="title">About</span>
-                    </a>
-                </li>
-                <li class="gui-folder">
-                    <a href="#">
-                        <div class="gui-icon">
-                            <img src="libraries/svg/x_with_16.svg">
-                        </div>
-                        <span class="title">Services</span>
-                    </a>
-                </li>
-                <li class="gui-folder">
-                    <a href="#">
-                        <div class="gui-icon">
-                            <img src="libraries/svg/x_with_16.svg">
-                        </div>
-                        <span class="title">Contact</span>
-                    </a>
-                </li>
+
             </ul>
         </div>
 
@@ -117,7 +101,6 @@
                 <h1>Simple Sidebar</h1>
                 <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
                 <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                <!--<a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Toggle Menu</a>-->
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -130,22 +113,28 @@
     <!-- Menu Toggle Script -->
     <script>
         $(document).ready(function() {
-            $('#menu-toggle').hide();
             $('.navbar-toggler-icon').hide();
+
+            $('.child-menu').hide();
         });
 
         $(".fecha").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
-            $('#menu-toggle').show();
             $('.navbar-toggler-icon').show();
         });
 
         $(".navbar-toggler-icon").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
-            $('#menu-toggle').hide();
             $('.navbar-toggler-icon').hide();
+        });
+
+        $(".menu").click(function(e){
+            e.preventDefault();
+            var $li = $(this).parent();
+            $('.child-menu').hide();
+            $('.child-menu',$li).show();
         });
     </script>
 </body>
