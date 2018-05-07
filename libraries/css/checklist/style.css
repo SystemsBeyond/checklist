@@ -142,6 +142,11 @@ ul ul a {
     transition: all 0.3s;*/
 }
 
+#content-dados {
+    width: 100%;
+    padding: 20px;
+}
+
 /**
 * Media Queries
 */
