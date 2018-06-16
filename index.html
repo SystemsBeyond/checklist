@@ -7,135 +7,143 @@
     <meta name="author" content="Jacson Milomem">
     <meta name="generator" content="Beyond Systems">
     <link href="./libraries/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="./libraries/css/checklist/checklist.css" rel="stylesheet">
+    <link href="./libraries/css/checklist/glyphicon.css" rel="stylesheet">
+    <link href="./libraries/css/checklist/style.css" rel="stylesheet">
 </head>
 <body>
-
-    <div id="wrapper" class="toggled">
+    <div class="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <div class="row">
-                        <div class="col-8">
-                            <img src="libraries/svg/task_green_16.svg"> Check-List
-                        </div>
-                        <div class="col-2">
-                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
-                            <a href="#" class="fecha"><img src="libraries/svg/x_with_16.svg"></a>
-                            <!-- </button> -->
-                        </div>
-                    </div>
-                </li>
-                <li class="gui-folder">
-                    <a href="#" class="menu">
-                        <div class="gui-icon">
-                            <img src="libraries/svg/x_with_16.svg">
-                        </div>
-                        <span class="title">Cadastro</span>
-                    </a>
-                    <ul class="child-menu">
-                      <li><a href="index.html">Empresa</a></li>
-                      <li><a href="index2.html">Filiais</a></li>
-                      <li><a href="index2.html">Auditor</a></li>
-                      <li><a href="index3.html">Check-list</a></li>
-                      <li><a href="index3.html">Perguntas</a></li>
-                      <li><a href="index2.html">Check-list Filiais</a></li>
-                      <li><a href="index2.html">Check-list Auditor</a></li>
-                    </ul>
-                </li>
-                <li class="gui-folder">
-                    <a href="#" class="menu">
-                        <div class="gui-icon">
-                            <img src="libraries/svg/x_with_16.svg">
-                        </div>
-                        <span class="title">Check-List</span>
-                    </a>
-                    <ul class="child-menu">
-                      <li><a href="index.html">Aplicar</a></li>
-                      <li><a href="index2.html">Ações</a></li>
-                      <li><a href="index2.html">Auditar</a></li>
-                    </ul>
-                </li>
-                <li class="gui-folder">
-                    <a href="#" class="menu">
-                        <div class="gui-icon">
-                            <img src="libraries/svg/x_with_16.svg">
-                        </div>
-                        <span class="title">Relatórios</span>
-                    </a>
-                    <ul class="child-menu">
-                      <li><a href="index.html">Diário</a></li>
-                      <li><a href="index2.html">Ações</a></li>
-                      <li><a href="index2.html">Intervalos</a></li>
-                      <li><a href="index2.html">Estatísticas</a></li>
-                    </ul>
-                </li>
+        <div id="sidebar">
 
-            </ul>
-        </div>
-
-        <!-- /#navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-top">
-            <a class="navbar-brand" href="#"><span class="navbar-toggler-icon"></span></a>
-
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <button class="btn btn-sm btn-light" type="button">Dashboard</button>
-                    <button class="btn btn-sm btn-light" type="button">CheckList</button>
-                    <button class="btn btn-sm btn-light" type="button">Ações</button>
-                </div>
+            <!-- Sidebar header -->
+            <div class="sidebar-header">
+                <img src="libraries/svg/task_green_16.svg">
+                 Check-List <a href="#" class='fechar'><i class="glyphicon glyphicon-remove"></i></a>
             </div>
 
-            <form class="form-inline">
-                <button class="btn btn-sm btn-outline-success" type="button">Main button</button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
-            </form>
+            <!-- Sidebar menu -->
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-th-large"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageCadastro" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-file"></i>
+                        Cadastro
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageCadastro">
+                        <li><a href="#">Empresa</a>
+                        <li><a href="#">Unidades</a>
+                        <li><a href="#">Setor</a>
+                        <li><a href="#">Auditor</a>
+                        <li><a href="#">Check-list</a>
+                        <li><a href="#">Perguntas</a>
 
-        </nav>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                        Check-list
+                    </a>
+                </li>
+                <li>
+                    <a href="#" >
+                        <i class="glyphicon glyphicon-edit"></i>
+                        Açoes
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageRelatorios" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-print"></i>
+                        Relatórios
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageRelatorios">
+                        <li><a href="#">Check-list</a>
+                        <li><a href="#">Ações</a>
+                        <li><a href="#">Setor</a>
+                        <li><a href="#">Auditor</a>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#pageConfigurador" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        Configuração
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageConfigurador">
+                        <li><a href="#">Usuarios</a>
+                        <li><a href="#">Parametros</a>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
 
         <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <h1>Simple Sidebar</h1>
-                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+        <div id="content">
+            <!-- /#navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light nav-top">
+                <a class="navbar-brand toggler-abre" href="#"><span class="navbar-toggler-icon"></span></a>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button class="btn btn-sm btn-outline-secondary btn-gren mr-sm-2" type="button"><i class="glyphicon glyphicon-th-large"></i></button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-sm btn-outline-secondary btn-gren mr-sm-2" type="button"><i class="glyphicon glyphicon-check"></i></button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-sm btn-outline-secondary btn-gren mr-sm-2" type="button"><i class="glyphicon glyphicon-edit"></i></button>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-outline-secondary btn-gren mr-sm-2" href="#" >
+                            <i class="glyphicon glyphicon-bell"></i>
+                        </a>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="btn btn-outline-secondary btn-gren dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Minha Conta</a>
+                            <a class="dropdown-item" href="#">Aletar Senha</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </div>
+                     </li>
+                </ul>
+
+            </nav>
+
+            <div id="content-dados">
+                <!--<nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                    </ol>
+                </nav>-->
+
+            
+
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="libraries/js/jquery/jquery-3.3.1.min.js"></script>
-    <script src="libraries/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="libraries/js/bootstrap/bootstrap.min.js"></script>
+    <script src="libraries/js/checklist/checklist.js"></script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-        $(document).ready(function() {
-            $('.navbar-toggler-icon').hide();
-
-            $('.child-menu').hide();
-        });
-
-        $(".fecha").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-            $('.navbar-toggler-icon').show();
-        });
-
-        $(".navbar-toggler-icon").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-            $('.navbar-toggler-icon').hide();
-        });
-
-        $(".menu").click(function(e){
-            e.preventDefault();
-            var $li = $(this).parent();
-            $('.child-menu').hide();
-            $('.child-menu',$li).show();
-        });
-    </script>
 </body>
 </html>

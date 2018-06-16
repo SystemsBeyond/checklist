@@ -18,9 +18,24 @@ function init_collapse(){
     });
 };
 
+/**
+* Realiza o load de parte de codigo no content-dados
+*/
+$.fn.carregaPagina = function(options){
+	/*preload = new $.preload();
+	preload.on();*/
+	$('#content-dados').empty();
+	$('#content-dados').load(options);
+	/*preload.off();*/
+};
+
 $(document).ready(function () {
     /* Inativa botao toggler*/
     $('.toggler-abre').hide();
+
     /*Inicializa controle do menu*/
     init_collapse();
+
+    /* Chama o dashboar inicial */
+    $(this).carregaPagina('./controller/dashboard.php');
 });

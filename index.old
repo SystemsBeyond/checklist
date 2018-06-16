@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sistema de automação de check-list, cheklist, check-list">
+    <meta name="author" content="Jacson Milomem">
+    <meta name="generator" content="Beyond Systems">
+    <link href="./libraries/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./libraries/css/checklist/checklist.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="wrapper" class="toggled">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <div class="row">
+                        <div class="col-8">
+                            <img src="libraries/svg/task_green_16.svg"> Check-List
+                        </div>
+                        <div class="col-2">
+                            <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+                            <a href="#" class="fecha"><img src="libraries/svg/x_with_16.svg"></a>
+                            <!-- </button> -->
+                        </div>
+                    </div>
+                </li>
+                <li class="gui-folder">
+                    <a href="#" class="menu">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Cadastro</span>
+                    </a>
+                    <ul class="child-menu">
+                      <li><a href="index.html">Empresa</a></li>
+                      <li><a href="index2.html">Filiais</a></li>
+                      <li><a href="index2.html">Auditor</a></li>
+                      <li><a href="index3.html">Check-list</a></li>
+                      <li><a href="index3.html">Perguntas</a></li>
+                      <li><a href="index2.html">Check-list Filiais</a></li>
+                      <li><a href="index2.html">Check-list Auditor</a></li>
+                    </ul>
+                </li>
+                <li class="gui-folder">
+                    <a href="#" class="menu">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Check-List</span>
+                    </a>
+                    <ul class="child-menu">
+                      <li><a href="index.html">Aplicar</a></li>
+                      <li><a href="index2.html">Ações</a></li>
+                      <li><a href="index2.html">Auditar</a></li>
+                    </ul>
+                </li>
+                <li class="gui-folder">
+                    <a href="#" class="menu">
+                        <div class="gui-icon">
+                            <img src="libraries/svg/x_with_16.svg">
+                        </div>
+                        <span class="title">Relatórios</span>
+                    </a>
+                    <ul class="child-menu">
+                      <li><a href="index.html">Diário</a></li>
+                      <li><a href="index2.html">Ações</a></li>
+                      <li><a href="index2.html">Intervalos</a></li>
+                      <li><a href="index2.html">Estatísticas</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- /#navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-top">
+            <a class="navbar-brand" href="#"><span class="navbar-toggler-icon"></span></a>
+
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <button class="btn btn-sm btn-light" type="button">Dashboard</button>
+                    <button class="btn btn-sm btn-light" type="button">CheckList</button>
+                    <button class="btn btn-sm btn-light" type="button">Ações</button>
+                </div>
+            </div>
+
+            <form class="form-inline">
+                <button class="btn btn-sm btn-outline-success" type="button">Main button</button>
+                <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+            </form>
+
+        </nav>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="libraries/js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="libraries/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $(document).ready(function() {
+            $('.navbar-toggler-icon').hide();
+
+            $('.child-menu').hide();
+        });
+
+        $(".fecha").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $('.navbar-toggler-icon').show();
+        });
+
+        $(".navbar-toggler-icon").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            $('.navbar-toggler-icon').hide();
+        });
+
+        $(".menu").click(function(e){
+            e.preventDefault();
+            var $li = $(this).parent();
+            $('.child-menu').hide();
+            $('.child-menu',$li).show();
+        });
+    </script>
+</body>
+</html>
